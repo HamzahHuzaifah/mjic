@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gurus",
+  "info": {
+    "singularName": "guru",
+    "pluralName": "gurus",
+    "displayName": "Guru",
+    "description": "Data Tenaga Pendidik dan Kependidikan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama_Lengkap": {
+      "type": "string",
+      "required": true
+    },
+    "Jabatan": {
+      "type": "string",
+      "required": true
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

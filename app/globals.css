@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Heavitas Reguler';
+  src: url('/fonts/Heavitas.woff2') format('woff2'),
+       url('/fonts/Heavitas.woff') format('woff'),
+       url('/fonts/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helios Extended';
+  src: url('/fonts/HeliosExtended.woff2') format('woff2'),
+       url('/fonts/HeliosExtended.woff') format('woff'),
+       url('/fonts/HeliosExtended.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montaser Arabic';
+  src: url('/fonts/MontaserArabic.woff2') format('woff2'),
+       url('/fonts/MontaserArabic.woff') format('woff'),
+       url('/fonts/MontaserArabic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +40,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-brand-red-main: #ff4367;
+  --color-brand-red-grad: #c20797;
+  --color-brand-green-main: #01bea4;
+  --color-brand-green-grad: #005d7a;
+  --color-brand-blue-main: #48b3ff;
+  --color-brand-blue-grad: #0070c0;
+
+  --font-heading-primary: "Heavitas Reguler", sans-serif;
+  --font-body-extended: "Helios Extended", sans-serif;
+  --font-heading-arabic: "Montaser Arabic", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +64,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-islamic-pattern {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-islamic-arabesque {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

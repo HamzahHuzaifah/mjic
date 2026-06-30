@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "profil_madrasahs",
+  "info": {
+    "singularName": "profil-madrasah",
+    "pluralName": "profil-madrasahs",
+    "displayName": "Profil_Madrasah",
+    "description": "Informasi Utama Profil Madrasah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Visi": {
+      "type": "text",
+      "required": true
+    },
+    "Misi": {
+      "type": "richtext",
+      "required": true
+    },
+    "Sejarah": {
+      "type": "richtext",
+      "required": true
+    },
+    "Sambutan_Kepsek": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

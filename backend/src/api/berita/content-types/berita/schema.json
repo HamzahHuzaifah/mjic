@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "beritas",
+  "info": {
+    "singularName": "berita",
+    "pluralName": "beritas",
+    "displayName": "Berita",
+    "description": "Berita dan pengumuman Madrasah"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Judul": {
+      "type": "string",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Judul",
+      "required": true
+    },
+    "Konten": {
+      "type": "richtext",
+      "required": true
+    },
+    "Foto_Utama": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Tanggal_Publish": {
+      "type": "date"
+    }
+  }
+}

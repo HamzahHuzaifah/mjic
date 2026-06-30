@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galeris",
+  "info": {
+    "singularName": "galeri",
+    "pluralName": "galeris",
+    "displayName": "Galeri",
+    "description": "Galeri Foto Kegiatan dan Fasilitas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Judul": {
+      "type": "string",
+      "required": true
+    },
+    "Kategori": {
+      "type": "enumeration",
+      "enum": [
+        "PAUDQu",
+        "TPQ",
+        "MDT",
+        "Fasilitas",
+        "Kegiatan"
+      ],
+      "required": true,
+      "default": "Kegiatan"
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
