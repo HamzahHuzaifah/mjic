@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import UnderDevelopment from "@/components/UnderDevelopment";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isUnderDevelopment = process.env.UNDER_DEVELOPMENT === 'true' || process.env.NEXT_PUBLIC_UNDER_DEVELOPMENT === 'true';
+
+  if (isUnderDevelopment) {
+    return (
+      <html
+        lang="id"
+        className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex items-center justify-center bg-zinc-950 text-zinc-100">
+          <UnderDevelopment />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html
       lang="en"
@@ -37,3 +53,4 @@ export default function RootLayout({
     </html>
   );
 }
+
