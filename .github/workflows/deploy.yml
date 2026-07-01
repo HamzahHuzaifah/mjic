@@ -28,9 +28,6 @@ jobs:
       - name: Build Next.js App
         run: npm run build
 
-      - name: Prune Dependencies for Production
-        run: npm prune --production
-
       - name: Create Restart File
         run: |
           mkdir -p tmp
@@ -51,6 +48,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/node_modules/**
             **/backend/**
             **/app/**
             **/components/**
