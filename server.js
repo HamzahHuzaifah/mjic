@@ -6,7 +6,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
 // cPanel/Passenger will automatically provide the correct port or socket via process.env.PORT
 const port = process.env.PORT || 3000;
-const app = next({ dev, hostname, port });
+const app = next({ dev, dir: __dirname, hostname, port });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
